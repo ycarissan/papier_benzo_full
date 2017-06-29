@@ -1,4 +1,4 @@
-radical=main
+radical=papier
 latex=pdflatex
 
 defaut: clean
