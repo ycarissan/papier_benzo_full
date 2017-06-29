@@ -1,0 +1,200 @@
+%% 
+%% Copyright 2007, 2008, 2009 Elsevier Ltd
+%% 
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the 'Elsarticle Bundle' is
+%% given in the file `manifest.txt'.
+%% 
+
+%% Template article for Elsevier's document class `elsarticle'
+%% with numbered style bibliographic references
+%% SP 2008/03/01
+
+%% \documentclass[preprint,12pt]{elsarticle}
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[authoryear,preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn]{elsarticle}
+%% \documentclass[final,3p,times]{elsarticle}
+\documentclass[final,3p,times,twocolumn]{elsarticle}
+%% \documentclass[final,5p,times]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn]{elsarticle}
+
+%% For including figures, graphicx.sty has been loaded in
+%% elsarticle.cls. If you prefer to use the old commands
+%% please give \usepackage{epsfig}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers.
+\usepackage{lineno}
+
+\journal{Computational and Theoretical Chemistry}
+
+\usepackage{lipsum}
+\graphicspath{{img/}}
+\newcommand{\trans}{\emph{trans}-disiloxybenzocyclobutene}
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for theassociated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for theassociated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for theassociated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \address{Address\fnref{label3}}
+%% \fntext[label3]{}
+
+\title{Influence of heteroatoms on the opening of benzocyclobutene}
+
+%% use optional labels to link authors explicitly to addresses:
+\author{Bertille Castel}
+\author{Jean-Marc Mattalia}
+\author{Paola Nava}
+\author{Yannick Carissan}
+\address{Aix Marseille Universit\'e, Centrale Marseille, CNRS,
+iSm2 UMR 7313,
+13397, Marseille, France}
+
+\begin{abstract}
+%% Text of abstract
+Abstract
+\end{abstract}
+
+\begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+
+%% PACS codes here, in the form: \PACS code \sep code
+
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+Benzocyclobutene \sep DFT \sep retro Diels Alder
+\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers
+
+%% main text
+\section{Introduction}
+\label{sec:introduction}
+Recent combined experimental and theoretical work
+shows that \trans{}, a benzocyclobutene
+derivative,
+reacts easily with dioxygen in its triplet state.\cite{Drujon2014}
+In this later article, it is demonstrated that
+the reactivity of benzocyclobutene derivatives can only be
+explained by a diradical electronic structure.
+The diradical character of singlet state "closed shell" systems
+draws a lot of attention nowadays~\cite{Abe2013,Hsieh2015}
+mainly due to the fact that it does not respect the Lewis electron
+coupling rule.\cite{Trinquier2015}
+
+Later on, some of us showed the influence of the combination
+of ring strain of the cyclobutene ring and aromaticity of the
+benzene ring on the reactivity of such species.\cite{Nava2014a}
+
+The control of the diradical character of the wavefunction
+of a molecule leads to a huge number of applications 
+in a broad range of fields from solar energy harvesting
+(charge separation induced by light induces a current)
+to the detection of radical species in living species
+(detection of NO in the blood of a patient is indicative
+of a future heart attack).
+
+In this article, we focus on the influence of the introduction
+of heteroatoms in benzocyclobutene on the opening
+of the cyclobutene ring, Fig.\ref{fig:reaction}.
+\section{Reactivity with $O_2$}
+The most remarkable feature of 
+\section{Computational details}
+\label{sec:computational_details}
+All calculations were done in the framework of density
+functional theory with the TURBOMOLE program package.
+The PBE0 functional is used with the def2-TZVP basis
+set.\cite{pbe0,def2tzvp}
+This showed to give the better agreement with highly correlated
+methods in a previous study.\cite{Nava2014a}
+Except if explicitly notified, reactant and product geometries
+were found to be minima of the potential energy surfaces
+by calculation of the hessian.
+For transition states, except if explicitly notified, one and
+only one negative eigenvalue
+of the hessian matrix was found along the reaction coordinate.
+\section{Results and discussion}
+\label{sec:results_and_discussion}
+The influence on the reaction enthalpy of the opening reaction
+of substitution on carbon atoms belonging to
+the six membered ring of \trans\ was tested.
+Results are gathered in Table~\ref{tab:reactions_lig}.
+The influence on the same reaction of the replacement
+of C-H groups by nitrogen atoms was also studied.
+These results can be found in Table~\ref{tab:reactions_N}.
+\section{Conclusion}
+\label{sec:conclusion}
+
+%% The Appendices part is started with the command \appendix;
+%% appendix sections are then done as normal sections
+%% \appendix
+
+%% \section{}
+%% \label{}
+
+%% If you have bibdatabase file and want bibtex to generate the
+%% bibitems, please use
+%%
+\bibliographystyle{elsarticle-num} 
+\bibliography{biblio}
+
+%% else use the following coding to input the bibitems directly in the
+%% TeX file.
+
+%% \begin{thebibliography}{00}
+
+%% \bibitem{label}
+%% Text of bibliographic item
+
+%% \bibitem{}
+
+%% \end{thebibliography}
+\newpage
+\input{reactions.tex}
+\newpage
+\newpage
+\input{fig_reaction.tex}
+\newpage
+\end{document}
+\endinput
+%%
+%% End of file `elsarticle-template-num.tex'.
